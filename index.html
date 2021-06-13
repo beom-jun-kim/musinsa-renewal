@@ -1,345 +1,667 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/reset.css">
-<title>musinsa renewal</title>
-</head>
-<body>
+@charset "utf-8";
+
+body {
+    background: #000;
+}
+header {
+    background: rgb(116, 114, 114);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    opacity: 0.9;
+}
+header .inner {
+    background: rgb(116, 114, 114);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+}
+header .logo:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+header .nav {
+    transform: translateX(-60px);
+    color: #fff;
+}
+header .nav .nav-sub {
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+}
+header .login .login-sub {
+    margin-right: 10px;
+}
+header .login {
+    margin-top: -10px;
+}
+header .login .login-sub:hover {
+    opacity: 0.5;
+}
+header .login .login-sub:nth-child(4) {
+    margin-right: 0;
+}
+header .login .login-sub:nth-child(1) {
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+header .login .login-sub:nth-child(2),
+header .login .login-sub:nth-child(3),
+header .login .login-sub:nth-child(4) 
+{
+    font-size: 1.5rem;
+    color: rgb(37, 37, 37);
+}
+.nav-sub-hover {
+    position: absolute;
+    top: 100%;
+    background: #fff;
+    color: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms;
+}
+.nav-sub-hover li {
+    display: block;
+    width: 100px;
+    height: 62px;
+    line-height: 50px;
+    font-weight: 600;
+}
+.nav-sub-hover li a {
+    height: 62px;
+    line-height: 62px;
+}
+.nav-sub-hover li:hover a {
+    background: darkgrey;
+    color: #fff;
+}
+.nav-sub a {
+    transition: 500ms;
+}
+.nav-sub-hover li a img {
+    width: 50px;
+}
+.add-img li a {
+    height: 100%;
+}
+.add-img li a img {
+    margin-top: 10px;
+}
+.add-img li {
+    height: 62px;
+}
+.nav-sub:hover > a {
+    opacity: 0.5;
+}
+.nav-sub:hover .nav-sub-hover  {
+    visibility: visible;
+    opacity: 1;
+}
+section.top {
+    margin-top: 80px;
+    height: 100vh;
+    text-align: center;
+}
+.gif-img {
+    max-width: 100%;
+    height: 100vh;
+}
+.gif-img img {
+    width: 100%;
+    height: 100%;
+}
+section.top .inner {
+    height: 500px;
+    position: relative;
+    top: -100%;
+}
+section.top .red-line {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    color: red;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align-last: left;
+    opacity: .5;
+}
+section.top .red-line h3 {
+    margin-bottom: 5px;
+}
+section.top .red-line .korea {
+    margin-top: 5px;
+}
+section.top .red-line .newyork {
+    display: inline-block;
+    width: 100px;
+}
+section.top .red-line .newyork:before {
+    content: '';
+    position: absolute;
+    top: 33%;
+    left: 0;
+    height: 3px;
+    width: 130px;
+    background: red;
+}
+section.top .red-line .korea:before {
+    content: '';
+    position: absolute;
+    top: 66%;
+    left: 0;
+    height: 3px;
+    width: 248px;
+    background: red;
+}
+section.top .red-line i {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+section.top .title-box {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    color: #fff;
+    font-size: 7rem;
+    text-transform: uppercase;
+}
+section.top .title-box h1 {
+    opacity: 0.3;
+}
+section.style {
+    margin-top: 100px;
+}
+section.style .inner {
+    position: relative;
+    background: #000;
+}
+.style-title-box {
+    /* margin-left: 65px; */
+    text-align: left;
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #fff;
+}
+.style-photo-box {
+    margin-top: 10px;
+}
+.style-photo-box-sub {
+    padding: 1rem;
+}
+.style-photo-box-sub-title {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.line1:before {
+    content: '';
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    height: 3px;
+    width: 250px;
+    background: #fff;
+}
+.line2:before {
+    content: '';
+    position: absolute;
+    top: 12%;
+    left: 37%;
+    height: 3px;
+    width: 250px;
+    background: #fff;
+}
+.line3:before {
+    content: '';
+    position: absolute;
+    top: 12%;
+    left: 67%;
+    height: 3px;
+    width: 250px;
+    background: #fff;
+}
+.line4:before {
+    content: '';
+    position: absolute;
+    top: 56.5%;
+    left: 8%;
+    height: 3px;
+    width: 250px;
+    background: #fff;
+}
+.line5:before {
+    content: '';
+    position: absolute;
+    top: 56.5%;
+    left: 37%;
+    height: 3px;
+    width: 250px;
+    background: #fff;
+}
+.line6:before {
+    content: '';
+    position: absolute;
+    top: 56.5%;
+    left: 67%;
+    height: 3px;
+    width: 250px;
+    background: #fff;
+}
+.style-photo-box-sub-title:nth-child(3):before {
+    content: '';
+    position: absolute;
+    top: 12%;
+    left: 37%;
+    height: 3px;
+    width: 250px;
+    background: #fff;
+}
+.style-photo-box-sub-title h5 {
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.style-photo-box-sub-img img {
+    width: 250px;
+    height: 242px;
+}
+section.popular {
+    margin-top: 100px;
+    color: #fff;
+}
+section.popular .inner {
+    background: #000;
+    position: relative;
+}
+section.popular .popular-title-box {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 2rem;
+    margin-left: -3px;
+}
+section.popular .popular-title-box:before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 170px;
+    height: 3px;
+    background: white;
+}
+section.popular .popular-box {
+    margin-top: 30px;
+}
+.popular-box-sub:hover:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(80, 80, 80, 0.5);
+}
+.popular-box-sub {
+    position: relative;
+    cursor: pointer;
+}
+section.popular .popular-box-sub {
+
+    max-width: 320px;
+    height: 480px;
+}
+section.popular .popular-box-sub img {
+    width: 100%;
+    height: 100%;
+}
+.popular-box-sub h3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 300ms;
+    visibility: hidden;
+}
+.popular-box-sub:hover h3 {
+    top: 40%;
+    opacity: 0.9;
+    visibility: visible;
+}
+.popular-box-sub p {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 300ms;
+    visibility: hidden;
+}
+.popular-box-sub:hover p {
+    bottom: 45%;
+    opacity: 0.9;
+    visibility: visible;
+}
+section.news {
+    margin-top: 100px;
+    color: #fff;
+    background: #000;
+}
+section.news .inner {
+    position: relative;
+}
+.news-title-box {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 2rem;
+    margin-left: -3px;
+}
+section.news .news-title-box:before {
+    content: '';
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 170px;
+    height: 3px;
+    background: white;
+}
+.news-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.news-main-content {
+    cursor: pointer;
+    margin-right: 50px;
+}
+.news-main-content img {
+    width: 100%;
+}
+.news-main-content p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.news-sub {
+    cursor: pointer;
+}
+.news-sub-first {
+    display: flex;
+}
+.news-sub-second {
+    display: flex;
+}
+.news-sub-img {
+    /* margin: 20px; */
+}
+.news-sub-img h5 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.news-sub-content {
+    padding: 1rem;
+}
+.news-sub-img p {
+    font-size: 14px;
+    color: rgb(116, 114, 114);
+}
+.news-sub-img img {
+    margin-bottom: 10px;
+    width: 70%;
+}
+section.designer {
+    margin-top: 100px;
+    color: #fff;
+    background: #000;
+}
+section.designer .inner {
+    position: relative;
+}
+.designer-title-box {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 2rem;
+    margin-left: -3px;
+}
+section.designer .designer-title-box:before {
+    content: '';
+    position: absolute;
+    top:14%;
+    left: 0;
+    width: 170px;
+    height: 3px;
+    background: white;
+}
+.designer-box {
+    display: flex;
+}
+.designer-box {
+    margin-top: 40px;
+}
+.designer-box .designer-box-sub {
+    padding: 1rem;
+    background-image: url(../img/ffe2766617079690711101499ce19ccc.jpg);
+    color: #000;
+    cursor: pointer;
+}
+.designer-box .designer-box-sub:nth-child(1) img,
+.designer-box .designer-box-sub:nth-child(2) img, 
+.designer-box .designer-box-sub:nth-child(3) img
+{
+    width: 250px;
+    height: 340px;
+}
+.designer-box-sub h2 {
+    font-family: Times;
+    font-weight: 100;
+} 
+.designer-box-sub-content {
+    text-align: left;
+}
+.designer-box-sub-content h2 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    opacity: .8;
+}
+.designer-box-sub-content p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: .8;
+}
+.designer-box-sub img {
+    position: relative;
+    top: 5%;
+    left: 10.5%;
+}
+.designer-box-sub:nth-child(3) img {
+    left: 13%;
+}
+footer {
+    margin: 70px 0 50px 0;
+    padding: 5rem;
+    color: #fff;
+    background: #000;
+    height: 100px;
+}
+footer .inner {
+    position: relative;
+    border: 3px solid red;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+footer .inner .information {
+    display: inline-block;
+    color: #777;
+    font-size: 12px;
+    margin-left: -20px;
+    margin-top: 30px;
+}
+footer .inner .owner {
+    margin-bottom: 10px;
+    position: relative;
+}
+footer .inner .owner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 64%;
+    width: 1px;
+    height: 13px;
+    background: #777;
+}
+footer .inner address {
+    margin-bottom: 10px;
+}
+footer .inner .sns {
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #999;
+    opacity: .5;
+    position: absolute;
+    top: 34px;
+    left: 73.4%;
+}
+
+@media (max-width:375px) {
+    header .nav  {
+        
+    }
+    header .login  {
+        transform: translate(-15px);
+    }
+    header .logo {
+        padding-left: 10px;
+    }
+    .gif-img {
+        height: 650px;
+    }
+    .gif-img img {
+        width: 235%;
+    }
+    section.popular .popular-box-sub {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    section.popular .inner {
+        transform: translate(50%);
+    }
+    section.top .red-line {
+        position: absolute;
+        top: 50%;
+    }
+    section.top .title-box {
+        font-size: 5rem;
+        top: 80%;
+        left: 42%;
+    }
+    .line1:before,
+    .line2:before,
+    .line3:before,
+    .line4:before,
+    .line5:before,
+    .line6:before {
+        display: none;
+    }
+    .style-title-box {
+        text-align: center;
+        transform: translate(10px);
+    }
+    .style-title-box h2 {
+        transform: translate(-120px);
+    }
+    .style-photo-box {
+        width: 230%;
+        transform: translate(10px);
+    }
+    .style-photo-box-sub h5 {
+        font-size: 2rem;
+    }
+    .style-photo-box-sub img {
+        width: 300px;
+        height: 300px;
     
-    <section class="top">
-        <div class="gif-img">
-            <img src="./img/musinsa video(2).gif" alt="">
-        </div>
-        <div class="inner">
-            <div class="red-line">
-                <h3 class="newyork">ny</h3> 
-                <i class="xi-plus"></i>
-                <h3 class="korea">korea</h3>
-                <h3 class="fashion-magazine">fashion magazine</h3>
-            </div>
-            <div class="animate__animated animate__fadeInUp title-box">
-                <h1>musinsa</h1>
-            </div>
-        </div>
-    </section>
-    <section class="style">
-        <div class="inner">
-            <div class="style-title-box">
-                <h2>Style</h2>
-            </div>
-            <div class="style-photo">
-                <ul class="style-photo-box">
-                    <li class="style-photo-box-sub">
-                        <a href="#">
-                            <div class="style-photo-box-sub-title line1">
-                                <h5>20's</h5>
-                            </div>
-                            <div class="style-photo-box-sub-img">
-                                <img src="./img/20's.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="style-photo-box-sub">
-                        <a href="#">
-                            <div class="style-photo-box-sub-title line2">
-                                <h5>10's</h5>
-                            </div>
-                            <div class="style-photo-box-sub-img">
-                                <img src="./img/10's.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="style-photo-box-sub">
-                        <a href="#">
-                            <div class="style-photo-box-sub-title line3">
-                                <h5>40's</h5>
-                            </div>
-                            <div class="style-photo-box-sub-img">
-                                <img src="./img/40's.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="style-photo-box-sub">
-                        <a href="#">
-                            <div class="style-photo-box-sub-title line4">
-                                <h5>Unisex</h5>
-                            </div>
-                            <div class="style-photo-box-sub-img">
-                                <img src="./img/20210609_152203.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="style-photo-box-sub">
-                        <a href="#">
-                            <div class="style-photo-box-sub-title line5">
-                                <h5>Woman</h5>
-                            </div>
-                            <div class="style-photo-box-sub-img">
-                                <img src="./img/woman.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="style-photo-box-sub">
-                        <a href="#">
-                            <div class="style-photo-box-sub-title line6">
-                                <h5>Man</h5>
-                            </div>
-                            <div class="style-photo-box-sub-img">
-                                <img src="./img/man.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="popular">
-        <div class="inner">
-            <div class="popular-title-box">
-                <h2>Popular</h2>
-            </div>
-            <ul class="popular-box">
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b61dabbfe1.jpg" alt="">
-                    <h3>Semi Bendable</h3>
-                    <p>42,000</p>
-                </li>
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b631200e53.jpg" alt="">
-                    <h3>Woven Skirt</h3>
-                    <p>56,000</p>
-                </li>
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b674517997.jpg" alt="">
-                    <h3>Tencel T-shirt</h3>
-                    <p>61,000</p>
-                </li>
-            </ul>
-            <ul class="popular-box">
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b67bfb99e3.jpg" alt="">
-                    <h3>Wide Jeans</h3>
-                    <p>72,000</p>
-                </li>
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b6b843eb88.jpg" alt="">
-                    <h3>Mmlg T-shirt</h3>
-                    <p>58,000</p>
-                </li>
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b6ece11ab9.jpg" alt="">
-                    <h3>High Wide</h3>
-                    <p>42,000</p>
-                </li>
-            </ul>
-            <ul class="popular-box">
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b706c2f68b.jpg" alt="">
-                    <h3>Sellaruption</h3>
-                    <p>39,000</p>
-                </li>
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b79b3dfb73.jpg" alt="">
-                    <h3>Half Shirt</h3>
-                    <p>66,000</p>
-                </li>
-                <li class="popular-box-sub">
-                    <img src="./img/list.staff_609b7c8c32ee4.jpg" alt="">
-                    <h3>Wide Jeans</h3>
-                    <p>47,000</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="news">
-        <div class="inner">
-            <div class="news-title-box">
-                <h2>News</h2>
-            </div>
-            <div class="news-wrap">
-                <div class="news-main-content">
-                    <p>"힙합계의 거장, 다이나믹 듀오 개코의 이야기를 들어보는..."</p>
-                    <img src="./img/news-main.png" alt="">
-                </div>
-                <div class="news-sub">
-                    <div class="news-sub-first">
-                        <div class="news-sub-img">
-                            <img src="./img/new-sub(1).png" alt="">
-                            <div class="news-sub-content">
-                                <h5>패션계의 악동 모스키노 </h5>
-                                <p>넘사벽 분위기를 만들어 줄 린넨 스타일링....</p>
-                            </div>
-                        </div>
-                        <div class="news-sub-img">
-                            <img src="./img/new-sub.png" alt="">
-                            <div class="news-sub-content">
-                                <h5>패션계의 악동 모스키노</h5>
-                                <p>넘사벽 분위기를 만들어 줄 린넨 스타일링....</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-sub-second">
-                        <div class="news-sub-img">
-                            <img src="./img/new-sub(3).png" alt="">
-                            <div class="news-sub-content">
-                                <h5>패션계의 악동 모스키노</h5>
-                                <p>넘사벽 분위기를 만들어 줄 린넨 스타일링....</p>
-                            </div>
-                        </div>
-                        <div class="news-sub-img">
-                            <img src="./img/new-sub(4).png" alt="">
-                            <div class="news-sub-content">
-                                <h5>패션계의 악동 모스키노</h5>
-                                <p>넘사벽 분위기를 만들어 줄 린넨 스타일링....</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="designer">
-        <div class="inner">
-            <div class="designer-title-box">
-                <h2>Designer</h2>
-            </div>
-            <ul class="designer-box">
-                <li class="designer-box-sub">
-                    <div class="designer-box-sub-content">
-                        <h2>Scarlett Johansson</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <img src="./img/designer.jpg" alt="">
-                </li>
-                <li class="designer-box-sub">
-                    <div class="designer-box-sub-content">
-                        <h2>Jennifer Lawrence</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <img src="./img/designer(2).jpg" alt="">
-                </li>
-                <li class="designer-box-sub">
-                    <div class="designer-box-sub-content">
-                        <h2>Emma Stone</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <img src="./img/designer(3).jpg" alt="">
-                </li>
-            </ul>
-        </div>
-    </section>
-    <header>
-        <div class="inner">
-            <div class="logo">
-                musinsa
-            </div>
-            <ul class="nav">
-                <li class="nav-sub">
-                    <a href="#">
-                        site
-                    </a>
-                    <ul class="nav-sub-hover">
-                        <li><a href="#">Golf goods</a></li>
-                        <li><a href="#">Accessory</a></li>
-                        <li><a href="#">Jewelry</a></li>
-                        <li><a href="#">Culture</a></li>
-                        <li><a href="#">Pet</a></li>
-                        <li><a href="#">Beauty</a></li>
-                    </ul>
-                </li>
-                <li class="nav-sub">
-                    <a href="#">
-                        brand
-                    </a>
-                    <ul class="nav-sub-hover add-img">
-                        <li><a href="#"><img src="./img/adidas.png" alt=""></a></li>
-                        <li><a href="#"><img src="./img/anderssonbell.png" alt=""></a></li>
-                        <li><a href="#"><img src="./img/branded.png" alt=""></a></li>
-                        <li><a href="#"><img src="./img/carhartt.png" alt=""></a></li>
-                        <li><a href="#"><img src="./img/covernat.png" alt=""></a></li>
-                        <li><a href="#"><img src="./img/kirsh.png" alt=""></a></li>
-                    </ul>
-                </li>
-                <li class="nav-sub">
-                    <a href="#">
-                        event
-                    </a>
-                    <ul class="nav-sub-hover">
-                        <li><a href="#">랜덤쿠폰</a></li>
-                        <li><a href="#">쿠폰</a></li>
-                        <li><a href="#">친구초대</a></li>
-                        <li><a href="#">체험단</a></li>
-                        <li><a href="#">사은품</a></li>
-                        <li><a href="#">신규 브랜드</a></li>
-                    </ul>
-                </li>
-                <li class="nav-sub">
-                    <a href="#">
-                        etc
-                    </a>
-                    <ul class="nav-sub-hover">
-                        <li><a href="#">매거진</a></li>
-                        <li><a href="#">룩북</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">큐레이팅</a></li>
-                        <li><a href="#">커뮤니티</a></li>
-                        <li><a href="#">회원후기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="login">
-                <li class="login-sub">
-                    <a href="#">
-                        login
-                    </a>
-                </li>
-                <li class="login-sub">
-                    <a href="#">
-                        <i class="xi-search"></i>
-                    </a>
-                </li>
-                <li class="login-sub">
-                    <a href="#">
-                        <i class="xi-user"></i>
-                    </a>
-                </li>
-                <li class="login-sub">
-                    <a href="#">
-                        <i class="xi-cart"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <footer>
-        <div class="inner">
-            <div class="information">
-                <ul class="owner">
-                    <li>
-                        <p>(주)무신사(MUSINSA Co,.Lid</p>
-                    </li>
-                    <li>
-                        <p>대표 : 조만호</p>
-                    </li>
-                </ul>
-                <address>
-                    <p>서울특별시 강남구 신사동 640-2 로빈명품관 지하1층</p>
-                </address>
-                <p>
-                    copyright(c) musinsa all rights reserved.
-                </p>
-            </div>
-            <div class="sns">
-                <img src="./img/footer_sns.png" alt="">
-            </div>
-            <div class="circle"></div>
-        </div>
-    </footer>   
-</body>
-</html>
+    }
+    section.popular .popular-title-box:before {
+        display: none;
+    }
+    .popular-box {
+        display: flex;
+        width: 230%;
+        transform: translate(-178px);
+    }
+    .popular-title-box {
+        transform: translate(-165px);
+    }
+    section.news {
+
+    }
+    section.news .inner {
+        width: 230%;
+        transform: translate(30px);
+    }
+    .news-title-box:before {
+        display: none;
+    }
+    section.designer {
+        
+    }
+    .designer-box {
+        width: 235%;
+    }
+    .designer-box-sub {
+
+    }
+    .designer-title-box {
+        transform: translate(20px);
+    }
+    .designer-title-box:before {
+        display: none;
+    }
+    .designer-box-sub img {
+        transform: translate(-8px);
+    }
+    .designer-box-sub:nth-child(2) img {
+        transform: translate(-5px);
+    }
+    .designer-box-sub:nth-child(3) img {
+        transform: translate(-12px);
+    }
+    footer {
+
+    }
+    footer .inner {
+        width: 350%;
+        padding-bottom: 2rem;
+    }
+    footer .inner .sns {
+        margin-top: 20px;
+    }
+    .circle {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: #999;
+        opacity: .5;
+        position: absolute;
+        top: 116px;
+        left: 62.6%;
+    }
+}
