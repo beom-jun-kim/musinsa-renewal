@@ -540,6 +540,8 @@ footer .inner .sns {
         padding: 0 1rem;
     }
     header .toggle {
+        position: relative;
+        right: 0;
         display: block;
         color: #fff;
         cursor: pointer;
@@ -594,7 +596,6 @@ footer .inner .sns {
     }
     footer .sns {
         margin: 20px 0;
-        transform: translate(-30px);
     } 
     footer .sns img {
         width: 250px;
