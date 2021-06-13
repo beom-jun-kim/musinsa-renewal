@@ -460,6 +460,10 @@ section.designer .designer-title-box:before {
     width: 250px;
     height: 340px;
 }
+.designer-box .designer-box-sub:nth-child(1) img,
+.designer-box .designer-box-sub:nth-child(2) img {
+    transform: translate(7px);
+}
 .designer-box-sub h2 {
     font-family: Times;
     font-weight: 100;
