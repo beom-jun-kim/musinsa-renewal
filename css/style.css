@@ -303,9 +303,6 @@ section.popular .popular-title-box:before {
     height: 3px;
     background: white;
 }
-section.popular .popular-box {
-    margin-top: 30px;
-}
 .popular-box-sub:hover:before {
     content: '';
     position: absolute;
@@ -402,9 +399,6 @@ section.news .news-title-box:before {
 }
 .news-sub-second {
     display: flex;
-}
-.news-sub-img {
-    /* margin: 20px; */
 }
 .news-sub-img h5 {
     font-size: 1rem;
@@ -591,11 +585,16 @@ footer .inner .sns {
         top: 130%;
         left: 20%;
     }
+    .news-main-content {
+        margin-right: 0;
+        padding: 1rem;
+    }
     footer .sns {
-        margin-top: 20px;
+        margin: 20px 0;
         transform: translate(-20px);
     } 
     footer .sns img {
-        width: 200px;
+        width: 250px;
+        height: 30px;
     }
 }
