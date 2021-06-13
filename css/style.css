@@ -92,6 +92,9 @@ header .login .login-sub:nth-child(4)
 .nav-sub-hover li a img {
     width: 50px;
 }
+.toggle {
+    display: none;
+}
 .add-img li a {
     height: 100%;
 }
@@ -537,4 +540,59 @@ footer .inner .sns {
     position: absolute;
     top: 34px;
     left: 73.4%;
+}
+@media (max-width:375px) {
+    header {
+        padding: 0 1rem;
+    }
+    header .toggle {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+    .gif-img {
+        height: 300px;
+        position: relative;
+        top: 80px;
+    }
+    header .nav,
+    header .login,
+    .circle,
+    .designer-box-sub:nth-child(2), 
+    .designer-box-sub:nth-child(3),
+    section.top .red-line,
+    section.top .red-line .newyork:before,
+    section.top .red-line .korea:before,
+    .line1,
+    .line2,
+    .line3,
+    .line4,
+    .line5,
+    .line6,
+    .designer-title-box:before,
+    .news-title-box:before,
+    .popular-title-box:before
+    {
+        display: none;
+    }
+    .news-wrap {
+        display: block;
+    }
+    section.top,
+    section.style {
+        margin: 0;
+        /* height: 300px; */
+    }
+    section.top .title-box {
+        font-size: 2rem;
+        top: 130%;
+        left: 20%;
+    }
+    footer .sns {
+        margin-top: 20px;
+        transform: translate(-20px);
+    } 
+    footer .sns img {
+        width: 200px;
+    }
 }
