@@ -575,13 +575,16 @@ footer .inner .sns {
     {
         display: none;
     }
-    .news-wrap {
+    .news-wrap,
+    .designer-box {
         display: block;
+    }
+    section.top {
+        height: 400px;
     }
     section.top,
     section.style {
         margin: 0;
-        /* height: 300px; */
     }
     section.top .title-box {
         font-size: 2rem;
