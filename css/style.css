@@ -9,7 +9,7 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    min-width: 100%;
+    width: 100%;
     opacity: 0.9;
 }
 header .inner {
@@ -315,8 +315,7 @@ section.popular .popular-title-box:before {
     cursor: pointer;
 }
 section.popular .popular-box-sub {
-
-    max-width: 320px;
+    width: 320px;
     height: 480px;
 }
 section.popular .popular-box-sub img {
@@ -501,7 +500,7 @@ footer .inner .information {
     display: inline-block;
     color: #777;
     font-size: 12px;
-    margin-left: -20px;
+    padding-right: 10px;
     margin-top: 30px;
 }
 footer .inner .owner {
@@ -533,7 +532,7 @@ footer .inner .sns {
     opacity: .5;
     position: absolute;
     top: 34px;
-    left: 73.5%;
+    left: 74%;
 }
 @media (max-width: 480px) {
     header {
