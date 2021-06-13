@@ -533,7 +533,7 @@ footer .inner .sns {
     opacity: .5;
     position: absolute;
     top: 34px;
-    left: 73.4%;
+    left: 73.5%;
 }
 @media (max-width: 480px) {
     header {
@@ -596,6 +596,7 @@ footer .inner .sns {
     }
     footer .sns {
         margin: 20px 0;
+        transform: translate(-20px);
     } 
     footer .sns img {
         width: 250px;
