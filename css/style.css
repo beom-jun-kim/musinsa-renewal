@@ -501,8 +501,7 @@ footer .inner .information {
     display: inline-block;
     color: #777;
     font-size: 12px;
-    margin-left: -20px;
-    margin-top: 30px;
+    margin: 30px 20px 0 -20px ;
 }
 footer .inner .owner {
     margin-bottom: 10px;
@@ -522,7 +521,7 @@ footer .inner address {
 }
 footer .inner .sns {
     display: inline-block;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     cursor: pointer;
 }
 .circle {
@@ -596,7 +595,6 @@ footer .inner .sns {
     }
     footer .sns {
         margin: 20px 0;
-        transform: translate(-30px);
     } 
     footer .sns img {
         width: 250px;
