@@ -595,7 +595,7 @@ footer .inner .sns {
     }
     footer .sns {
         margin: 20px 0;
-        transform: translate(-20px);
+        transform: translate(-15px);
     } 
     footer .sns img {
         width: 250px;
